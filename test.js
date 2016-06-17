@@ -3,7 +3,7 @@
 
 const pako = require('pako');
 const zlib = require('zlib');
-const data = require('fs').readFileSync(require('path').join(__dirname, 'bug.bin'));
+const data = require('fs').readFileSync(require('path').join(__dirname, 'sample_huge.bin'));
 
 
 console.warn(`Deflating ${data.length} bytes`);
