@@ -3,13 +3,13 @@
 
 const pako = require('pako');
 const zlib = require('zlib');
-const data = require('fs').readFileSync(require('path').join(__dirname, 'sample_huge.bin'));
+const data = require('fs').readFileSync(require('path').join(__dirname, 'test_image.bin'));
 
 
 console.warn(`Deflating ${data.length} bytes`);
 console.warn('=======================');
 
-const options = { level: 6 };
+const options = { level: 7 };
 
 let deflatedPakoData = pako.deflate(data, options);
 let deflatedZlibData = zlib.deflateSync(data, options);
